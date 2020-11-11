@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="100dp"
+    android:weightSum="11"
+    >
+    <ImageView
+        android:id="@+id/image_popular_adapter"
+        android:layout_width="0dp"
+        android:layout_weight="6"
+        android:layout_height="match_parent"
+        android:src="@mipmap/flipper01"
+        android:scaleType="centerCrop"
+        />
+    <TextView
+        android:id="@+id/text_popular_adapter"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="match_parent"
+        android:text="[手残联盟]6周年特别节目"
+        android:textSize="18sp"
+        />
+</LinearLayout>

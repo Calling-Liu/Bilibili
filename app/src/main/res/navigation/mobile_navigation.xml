@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bilibili.fragment.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_news"
+            app:destination="@id/nav_news" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_tv"
+            app:destination="@id/nav_tv" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_shop"
+            app:destination="@id/nav_shop" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_tv"
+        android:name="com.example.bilibili.fragment.tv.TVFragment"
+        android:label=""
+        tools:layout="@layout/tv_fragment" >
+        <action
+            android:id="@+id/action_nav_tv_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_tv_to_nav_news"
+            app:destination="@id/nav_news" />
+        <action
+            android:id="@+id/action_nav_tv_to_nav_shop"
+            app:destination="@id/nav_shop" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.example.bilibili.fragment.news.NewsFragment"
+        android:label=""
+        tools:layout="@layout/news_fragment" >
+        <action
+            android:id="@+id/action_nav_news_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_news_to_nav_tv"
+            app:destination="@id/nav_tv" />
+        <action
+            android:id="@+id/action_nav_news_to_nav_shop"
+            app:destination="@id/nav_shop" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_shop"
+        android:name="com.example.bilibili.fragment.shop.ShopFragment"
+        android:label=""
+        tools:layout="@layout/shop_fragment" >
+        <action
+            android:id="@+id/action_nav_shop_to_nav_tv"
+            app:destination="@id/nav_tv" />
+        <action
+            android:id="@+id/action_nav_shop_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_shop_to_nav_news"
+            app:destination="@id/nav_news" />
+    </fragment>
+</navigation>
